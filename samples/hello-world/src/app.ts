@@ -66,7 +66,7 @@ export default class HelloWorld {
 			{ isPlaying: true, wrapMode: MRE.AnimationWrapMode.PingPong });
 
 		// Load a glTF model before we use it
-		const cubeData = await this.assets.loadGltf('altspace-cube.glb', "box");
+		const cubeData = await this.assets.loadGltf('fscube.glb', "box");
 
 		// spawn a copy of the glTF model
 		this.cube = MRE.Actor.CreateFromPrefab(this.context, {
@@ -74,7 +74,7 @@ export default class HelloWorld {
 			firstPrefabFrom: cubeData,
 			// Also apply the following generic actor properties.
 			actor: {
-				name: 'Altspace Cube',
+				name: 'FSS Cube',
 				// Parent the glTF model to the text actor, so the transform is relative to the text
 				parentId: this.text.id,
 				transform: {
